@@ -13,7 +13,7 @@ class Criteria_model extends CI_Model {
 	public function getId($id = '')
 	{
 		$this->db->where('id', $id);
-		return $this->db->get($this->table)->result_object();
+		return $this->db->get($this->table)->row();
 	}
 
 	public function create($data)

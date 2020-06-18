@@ -25,7 +25,7 @@
 						Setting
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Kriteria</a>
+						<a class="dropdown-item" href="<?= site_url('criteria'); ?>">Kriteria</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -39,6 +39,16 @@
 	</nav>
 
 	<div class="container pt-3">
+
+		<?php if ($this->session->flashdata('info')): ?>
+			<div class="alert alert-warning alert-dismissible fade show shadow-sm" role="alert">
+				<strong>Info</strong> <?php echo $this->session->flashdata('info'); ?>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		<?php endif; ?>
+
 		<div class="card shadow-sm">
 			<div class="card-body">
 				<?php isset($content) ? $this->load->view($content) : '';  ?>

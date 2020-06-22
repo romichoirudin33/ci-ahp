@@ -1,9 +1,9 @@
 <div>
-	<h4>Kriteria</h4>
+	<h4>List Alternatif</h4>
 
 	<hr>
 
-	<a class="btn btn-primary mb-3 " href="<?= site_url('criteria/add') ?>">Tambah</a>
+	<a class="btn btn-primary mb-3 " href="<?= site_url('alternatif/add') ?>">Tambah</a>
 
 	<?php if (count($data) > 0){ ?>
 		<table class="table table-bordered shadow-sm">
@@ -11,7 +11,6 @@
 				<tr>
 					<th class="text-center">No</th>
 					<th>Nama</th>
-					<th class="text-center">Nilai</th>
 					<th class="text-center">Bobot AHP</th>
 					<th class="text-center">Aksi</th>
 				</tr>
@@ -23,19 +22,18 @@
 						<td class="text-center"><?= $no++; ?></td>
 						<td>
 							<?= $key->name ?>
-							<a href="<?= site_url('criteria/detail')."/".$key->id; ?>" class="btn btn-info btn-sm">
+							<a href="<?= site_url('alternative/detail')."/".$key->id; ?>" class="btn btn-info btn-sm">
 								<span class="fa fa-edit"> Detail 
 								</span>
 							</a>
 						</td>
-						<td class="text-center"><?= $key->value ?></td>
-						<td class="text-center"><?= $key->weight_value ?></td>
+						<td class="text-center"><?= $key->weight_alternative ?></td>
 						<td class="text-center">
-							<a href="<?= site_url('criteria/edit')."/".$key->id; ?>" class="btn btn-info btn-sm">
+							<a href="<?= site_url('alternative/edit')."/".$key->id; ?>" class="btn btn-info btn-sm">
 								<span class="fa fa-edit"> Edit 
 								</span>
 							</a>
-							<a href="<?= site_url('criteria/delete')."/".$key->id; ?>" class="btn btn-warning btn-sm"onclick="return confirm('Hapus Data Ini ?')">
+							<a href="<?= site_url('alternative/delete')."/".$key->id; ?>" class="btn btn-warning btn-sm"onclick="return confirm('Hapus Data Ini ?')">
 								<span class="fa fa-trash-o"> Hapus 
 								</span>
 							</a>

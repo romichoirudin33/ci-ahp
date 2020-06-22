@@ -6,6 +6,12 @@
 		body{
 			background-color: #eee; 
 		}
+		.btn-xs {
+			padding: .10rem .25rem;
+			font-size: .65rem;
+			line-height: 1.5;
+			border-radius: .1rem;
+		}
 	</style>
 </head>
 <body>
@@ -26,10 +32,11 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<?= site_url('criteria'); ?>">Kriteria</a>
+						<a class="dropdown-item" href="<?= site_url('alternative'); ?>">Alternatif</a>
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Alternatif</a>
+					<a class="nav-link" href="#">Hasil Alternatif</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Logout</a>

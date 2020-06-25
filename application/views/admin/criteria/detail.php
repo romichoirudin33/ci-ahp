@@ -26,7 +26,7 @@
 		<?php foreach ($answer as $key): ?>
 			<li style="padding-left: 20">
 				<?= $key->name ?> (<?= $key->value ?>)
-				<a class="btn btn-xs btn-danger" href="<?= site_url('criteria/delete_answer/'.$key->id) ?>">Hapus</a>
+				<a class="btn btn-xs btn-danger" href="<?= site_url('criteria/delete_answer/'.$key->id) ?>">X</a>
 			</li>
 		<?php endforeach; ?>
 	</ol>
@@ -35,6 +35,10 @@
 	<button type="button" class="btn btn-primary btn-sm mt-3" data-toggle="modal" data-target="#exampleModal">
 		Tambah
 	</button>
+	<a href="<?= site_url('criteria'); ?>" class="btn btn-info btn-sm mt-3">
+		<span class="fa fa-edit"> Kembali 
+		</span>
+	</a>
 
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">

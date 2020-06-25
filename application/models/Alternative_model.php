@@ -13,7 +13,7 @@ class Alternative_model extends CI_Model {
 	public function getId($id = '')
 	{
 		$this->db->where('id', $id);
-		return $this->db->get($this->table)->result_object();
+		return $this->db->get($this->table)->row();
 	}
 
 	public function create($data)
@@ -28,6 +28,7 @@ class Alternative_model extends CI_Model {
 
 	public function delete($id ='')
 	{
+		$this->db->delete('detail_alternative', array('alternative_id' => $id));
 		return $this->db->delete($this->table, array('id' => $id));
 	}
 

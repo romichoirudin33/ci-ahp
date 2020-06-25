@@ -5,6 +5,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data['content'] = 'admin/welcome';
+		$this->load->view('v_admin', $data, FALSE);
+		// $this->load->view('welcome_message');
 	}
 }

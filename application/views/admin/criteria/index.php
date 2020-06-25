@@ -35,7 +35,7 @@
 								<span class="fa fa-edit"> Edit 
 								</span>
 							</a>
-							<a href="<?= site_url('criteria/delete')."/".$key->id; ?>" class="btn btn-warning btn-sm"onclick="return confirm('Hapus Data Ini ?')">
+							<a href="<?= site_url('criteria/delete')."/".$key->id; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Hapus Data Ini ?')">
 								<span class="fa fa-trash-o"> Hapus 
 								</span>
 							</a>

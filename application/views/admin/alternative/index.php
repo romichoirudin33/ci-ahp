@@ -3,7 +3,7 @@
 
 	<hr>
 
-	<a class="btn btn-primary mb-3 " href="<?= site_url('alternatif/add') ?>">Tambah</a>
+	<a class="btn btn-primary mb-3 " href="<?= site_url('alternative/add') ?>">Tambah</a>
 
 	<?php if (count($data) > 0){ ?>
 		<table class="table table-bordered shadow-sm">
@@ -22,18 +22,22 @@
 						<td class="text-center"><?= $no++; ?></td>
 						<td>
 							<?= $key->name ?>
+						</td>
+						<td class="text-center">
+							<?php if ($key->weight_alternative != 0){ ?>
+								<?= $key->weight_alternative ?>
+							<?php }else{ ?>
+								<span class="text-muted" style="font-size: 12">
+									Klik <a href="<?= site_url('') ?>">disini</a> untuk menghitung bobot
+								</span>
+							<?php } ?>
+						</td>
+						<td class="text-center">
 							<a href="<?= site_url('alternative/detail')."/".$key->id; ?>" class="btn btn-info btn-sm">
 								<span class="fa fa-edit"> Detail 
 								</span>
 							</a>
-						</td>
-						<td class="text-center"><?= $key->weight_alternative ?></td>
-						<td class="text-center">
-							<a href="<?= site_url('alternative/edit')."/".$key->id; ?>" class="btn btn-info btn-sm">
-								<span class="fa fa-edit"> Edit 
-								</span>
-							</a>
-							<a href="<?= site_url('alternative/delete')."/".$key->id; ?>" class="btn btn-warning btn-sm"onclick="return confirm('Hapus Data Ini ?')">
+							<a href="<?= site_url('alternative/delete')."/".$key->id; ?>" class="btn btn-danger btn-sm"onclick="return confirm('Hapus Data Ini ?')">
 								<span class="fa fa-trash-o"> Hapus 
 								</span>
 							</a>

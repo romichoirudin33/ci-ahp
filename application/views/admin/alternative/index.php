@@ -24,8 +24,8 @@
 							<?= $key->name ?>
 						</td>
 						<td class="text-center">
-							<?php if ($key->weight_alternative != 0){ ?>
-								<?= $key->weight_alternative ?>
+							<?php if ($key->weight_value != 0){ ?>
+								<?= $key->weight_value ?>
 							<?php }else{ ?>
 								<span class="text-muted" style="font-size: 12">
 									Klik <a href="<?= site_url('') ?>">disini</a> untuk menghitung bobot

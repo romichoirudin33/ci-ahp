@@ -12,7 +12,7 @@
 		<tr>
 			<td>Nilai / Bobot Alternative</td>
 			<td>:</td>
-			<td><?= $data->weight_alternative ?></td>
+			<td><?= $data->weight_value ?></td>
 		</tr>
 	</table>
 	<hr>

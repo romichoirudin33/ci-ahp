@@ -12,6 +12,9 @@
 			line-height: 1.5;
 			border-radius: .1rem;
 		}
+		.text-sm{
+			font-size: 13;
+		}
 	</style>
 </head>
 <body>
@@ -36,7 +39,7 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Hitung Alternatif</a>
+					<a class="nav-link" href="<?= site_url('hitung_alternative') ?>">Hitung Alternatif</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#" onclick="return confirm('Anda yakin akan logout ?')">Logout</a>
@@ -45,7 +48,7 @@
 		</div>
 	</nav>
 
-	<div class="container pt-3">
+	<div class="container pt-3 pb-5">
 
 		<?php if ($this->session->flashdata('info')): ?>
 			<div class="alert alert-warning alert-dismissible fade show shadow-sm" role="alert">

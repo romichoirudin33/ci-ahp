@@ -6,6 +6,9 @@ class Hitung_alternative extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if ($this->session->userdata('id') == null) {
+			redirect('auth','refresh');
+		}
 		$this->load->model('Criteria_model');
 		$this->load->model('Answer_model');
 		$this->load->model('Alternative_model');

@@ -42,7 +42,7 @@
 					<a class="nav-link" href="<?= site_url('hitung_alternative') ?>">Hitung Alternatif</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#" onclick="return confirm('Anda yakin akan logout ?')">Logout</a>
+					<a class="nav-link" href="<?= site_url('auth/destroy') ?>" onclick="return confirm('Anda yakin akan logout ?')">Logout</a>
 				</li>
 			</ul>
 		</div>
